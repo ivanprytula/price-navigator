@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=price_navigator
+POSTGRES_USER=price_dwh_user
+POSTGRES_PASSWORD=sdepassword1234_local

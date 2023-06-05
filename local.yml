@@ -1,0 +1,43 @@
+version: '3'
+
+volumes:
+  price_navigator_local_postgres_data: {}
+  price_navigator_local_postgres_data_backups: {}
+
+services:
+  django: &django
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: price_navigator_local_django
+    container_name: price_navigator_local_django
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app:z
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    ports:
+      - '8000:8000'
+    command: /start
+    networks:
+      - price_network
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/production/postgres/Dockerfile
+    image: price_navigator_production_postgres
+    container_name: price_navigator_local_postgres
+    volumes:
+      - price_navigator_local_postgres_data:/var/lib/postgresql/data
+      - price_navigator_local_postgres_data_backups:/backups
+    env_file:
+      - ./.envs/.local/.postgres
+    networks:
+      - price_network
+
+networks:
+  price_network:
+    name: price_network

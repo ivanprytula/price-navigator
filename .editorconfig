@@ -1,8 +1,12 @@
+# http://editorconfig.org
+
 root = true
 
 [*]
 indent_style = space
 indent_size = 4
+
+# It is recommended to keep unchanged
 insert_final_newline = true
 trim_trailing_whitespace = true
 end_of_line = lf
@@ -12,21 +16,23 @@ charset = utf-8
 [*.py]
 max_line_length = 119
 
-# Use 2 spaces for the HTML files
-[*.html]
-indent_size = 2
-
-[*.django.html]
+[*.{html,css,scss,json,yml,xml}]
 indent_size = 2
 
 # The JSON files contain newlines inconsistently
 [*.json]
-indent_size = 2
 insert_final_newline = ignore
 
-[*.yaml]
+[*.{yaml,yml}]
 indent_size = 2
 
-# Makefiles always use tabs for indentation
+[Dockerfile]
+indent_style = tab
+indent_size = 4
+
+# Makefile always use tabs for indentation
 [Makefile]
+indent_style = tab
+
+[*.sh]
 indent_style = tab

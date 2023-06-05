@@ -1,6 +1,8 @@
 # Web application for efficient (easy and cheap) shopping of groceries & household items
 
-## Current problem
+[![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+
+## Formulation of the current problem
 
 No easy(!) way of having head-to-head price comparison of specific food items between different shops on specific day/period. Why it is so?
 
@@ -23,7 +25,7 @@ The questions that must be answered and solved are:
 - how to parse/collect data from many webpages?
 - where we can find APIs of those stores/supermarkets - it's much easier to work with structured JSON/XML responses
 
-## Solution, v1
+## Solution, v0.0.1
 
 Web application with the following high-level components and functionality:
 
@@ -65,130 +67,57 @@ Web application with the following high-level components and functionality:
   - continuous integration and delivery (CI/CD)
   - clouds services
 
-### System design and architecture
+More details about architecture and tech stack can be found in [documentation](docs/project_details/project_knowledge_base/verbose_details.md)
 
-todo UML ERD etc
-...
+### Installation
 
-### Tech Stack
+```bash
+git clone https://github.com/ivanprytula/price-navigator.git
 
-In terms of _layers_:
+# or
+gh repo clone ivanprytula/price-navigator
 
-"Backend Burger"
+cd price-navigator
+```
 
-1. **Containerization**: Docker, Docker Compose
-2. **Architectural patterns**: Monolithic
-3. **CI/CD Tools**: GitHub Actions
-4. **APIs**: RESTful API
-5. **VCS**: GitHub
-6. **Caching**: Browser cache, CDN
-7. **Frameworks**: Django
-8. **Programming language**: Python
-9. **Testing**: Unit testing
-10. **Database**: RDBMS (PostgreSQL), NoSQL (Redis as message broker)
-11. **Third-party integrations**: email, open-source maps API
+#### Local setup
 
-"Frontend Burger"
+1. Start [status|stop] PostgreSQL server: `sudo systemctl start postgresql` or `sudo service postgresql start`
+2. Create a new PostgreSQL database with...
+   1. PostgreSQL client `psql` (steps below)
+   2. Shell CLI [createdb](https://www.postgresql.org/docs/current/app-createdb.html)
+   3. pgAdmin
+   4. Your preferable way
+3. Set the environment variables, there are 2 options:
+   1. Create `.env` file in the root of your project with all needed variables. Then `export DJANGO_READ_DOT_ENV_FILE=True`
+   2. Use a local environment manager like [direnv](https://direnv.net/)
+4. Dry run w/o migrations - just spin off _classic_ `./manage.py runserver` or `./manage.py runserver_plus` (w/ watchdog and Werkzeug debugger)
+5. Visit <http://127.0.0.1:8000/>
+6. Setting up your users:
+   1. **normal user account**: just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
+   2. `python manage.py createsuperuser`
 
-1. **Responsive, interactive, and dynamic web interface**: HTML5 (structure), CSS3 (style), behavior (JavaScript)
-2. **Interactive visualizations**: JS libs
+```bash
+# verbose option
+sudo -u postgres -i psql
 
-In terms of _technologies_:
+CREATE DATABASE price_navigator;
+CREATE USER price_dwh_user WITH PASSWORD 'my_password';
+# it is recommended to set these stuff also
+# https://docs.djangoproject.com/en/4.2/ref/databases/#optimizing-postgresql-s-configuration
+ALTER ROLE price_dwh_user SET client_encoding TO 'utf8';
+ALTER ROLE price_dwh_user SET default_transaction_isolation TO 'read committed';
+ALTER ROLE price_dwh_user SET timezone TO 'UTC';
+GRANT ALL PRIVILEGES ON DATABASE "price_navigator" to price_dwh_user;
 
-1. **Environment setup**: shell scripts, Makefile, Docker, Docker Compose, Kubernetes
-2. **Backend**: Python 3.10, Django 4.2
-3. **API**: Django REST Framework, Websockets, Swagger/OpenAPI
-4. **Databases servers/Docker images**: PostgreSQL, Redis, MongoDB, Cassandra
-5. **Data analysis**: Pandas, NumPy, Matplotlib, Seaborn, or Plotly
-6. **ETL pipeline**: Airflow
-7. **Web scraping**: requests, BeautifulSoup, or Scrapy
-8. **Code quality**: linters, formatters, security scanners, git hooks
-9. **Testing**: Pytest, pytest-django, locust, coverage, TDD
-10. **Security**: pay attention to
-    - CORS
-    - CSRF
-    - environment variables/password/secrets management
-    - Content Security Policy (CSP)
-    - XSS
-    - Django deployment check list
-11. **UI**: HTML, CSS, JavaScript
-12. **Documentation**: Markdown, reStructuredText
-13. **Cloud hosting/PaaS**: AWS (EC2, S3, CloudWatch)
-14. **IaaC**: Terraform or Ansible
+# jic, if you are in a hurry, here is one-liner option
+sudo -u postgres psql -c 'create database price_navigator;'
+postgres=# \l  # list all databases
+```
 
-In terms of detailed list of _dependencies/packages/libraries_:
+#### Dockerized setup
 
-1. Check `requirements.txt` / `pyproject.toml` / `package.json`
-
-In terms of _tech skills / practical knowledge / experience with_:
-
-1. Design patterns and SOLID principles
-2. Data structures and algorithms
-3. Experience with Python web frameworks both sync and async
-4. Implement various ways of communication with client (e.g. REST API, WebSockets)
-5. Implement various ways of authentication (e.g. JWT, cookie-based auth, OAuth)
-6. Experience and development on different data stores (RDBMS, NoSQL, KeyStore, etc.)
-7. Experience in databases optimization: indexing, query tuning, execution plans, normalization
-8. Proficiency in testing
-9. Experience with CI/CD, deployment tools
-10. Cloud platforms (AWS/GPC/Azure) and their core services
-
-In terms of _soft skills_:
-
-1. Good communication skills and at least an Upper-Intermediate level of English
-2. Energetic team player
-3. Highly motivated, self-driven, and independent
-
-In terms of _responsibilities_:
-
-1. Clarifying requirements and advising on the technical approach
-2. Developing site parsers and performing data cleaning and transformation
-3. Maintaining, configuring, and improving integration with various third-party services
-4. Ensuring coding quality and maintainability of development
-5. Code review
-6. Communicating with cross-functional teams that develop applications
-7. Managing priorities, deadlines, and deliverables
-
-In terms of _typical developer tools_:
-
-1. VS Code as IDE
-2. VS Code extensions:
-   1. API Client: Thunder Client
-   2. SQLTools
-   3. PostgreSQL Management Tool
-   4. ShellCheck
-   5. Remote Development
-   6. markdownlint
-3. `.editorconfig` to maintain consistent coding styles for multiple developers
-4. Browsers' Web Developer tools
-5. shell alias for Git commands
-6. cheat sheet of most common/oftenly used shell/CLI commands
-
-#### Useful resources
-
-1. **Base/core**:
-   1. <https://docs.python.org/3/>
-   2. <https://docs.djangoproject.com/en/4.2/>
-   3. <https://docs.docker.com/>
-2. **Handy web services/tools**:
-    1. <https://regex101.com/>
-    2. <https://jsonformatter.curiousconcept.com/>
-    3. <https://www.sql-practice.com/>
-    4. <https://caniuse.com/>
-3. **Particular topics**:
-   1. <https://www.buchanan.com/database-performance-tuning-techniques/>
-   2. <https://www.digitalocean.com/community/tutorials/how-to-secure-your-django-application-with-a-content-security-policy>
-   3. <https://www.laac.dev/blog/content-security-policy-using-django/>
-4. **General articles/blogs/books**
-   1. <https://bytebytego.com/courses/system-design-interview/foreword>
-   2. <https://www.startdataengineering.com/>
-5. **Inspiration/templates**
-    1. <https://awesomedjango.org/>
-    2. <https://github.com/donnemartin/system-design-primer>
-6. **Other/pile of links**
-   1. <https://www.testgorilla.com/glossary/>
-
-##### Credits and gratitude
-
-1. <https://github.com/erayerdin/sos-django-template>
-2. <https://github.com/jefftriplett/django-startproject>
+```bash
+make up
+make down
+```
