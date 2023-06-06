@@ -7,10 +7,6 @@ htmlcov/
 
 # Environments
 venv/
-.env
-.envs/*
-!.envs/.local/
-.envrc
 
 # Django stuff:
 db.sqlite3
@@ -21,4 +17,14 @@ docs/_build/
 # mypy
 .mypy_cache/
 
+### VisualStudioCode
 .vscode/*
+
+### Project
+price_navigator/media/
+
+.pytest_cache/
+.env
+.envs/*
+!.envs/.local/
+.envrc

@@ -1,6 +1,12 @@
-# TOC
+---
+myst:
+  enable_extensions: ["colon_fence"]
+---
 
-- [TOC](#toc)
+(verbose-details)=
+# Verbose details
+
+- [Verbose details](#verbose-details)
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Project structure](#project-structure)
@@ -39,7 +45,6 @@ Run the following commands in your project directory.
 ```shell
 make up
 ```
-
 
 ## Project structure
 

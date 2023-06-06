@@ -8,7 +8,7 @@ from price_navigator.users.managers import UserManager
 
 class User(AbstractUser):
     """
-    Default custom user model for simple-price-navigator.
+    Default custom user model for price-navigator.
     If adding fields that need to be filled at user signup,
     check forms.SignupForm and forms.SocialSignupForms accordingly.
     """

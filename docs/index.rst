@@ -7,10 +7,13 @@ Welcome to price-navigator's documentation!
 ======================================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :caption: Contents:
 
    howto
+   project_verbose_details
+   general_project_management
+   python_best_practices
    users
 
 

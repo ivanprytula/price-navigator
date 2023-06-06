@@ -64,7 +64,7 @@
 
 #### Phases of Agile SDLC
 
-![Phases of Agile SDLC](images/6_phases_of_sdlc.png)
+![Phases](images/6_phases_of_sdlc.png)
 
 ##### Scrum vs. Kanban
 
