@@ -7,7 +7,7 @@ Welcome to price-navigator's documentation!
 ======================================================================
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 2
    :caption: Contents:
 
    howto
@@ -24,3 +24,8 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. seealso::
+
+   The authoritative `reStructuredText User Documentation
+   <https://docutils.sourceforge.io/rst.html>`_.

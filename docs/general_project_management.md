@@ -1,4 +1,6 @@
-# SDLC (Software/System Development Life Cycle) methodology
+# SDLC methodology
+
+Software/System Development Life Cycle
 
 1. Analysis / Planning
 2. Design
@@ -64,29 +66,31 @@
 
 #### Phases of Agile SDLC
 
-![Phases](images/6_phases_of_sdlc.png)
+![Phases](images/sdlc/six_phases_of_sdlc.png)
 
 ##### Scrum vs. Kanban
 
-Scrum divides a project into short iterations, usually between 1 – 4 weeks in length. Each iteration is called a "sprint". The Scrum Master leads the team, and they work together to deliver an iteration at the end of each Sprint. A Scrum team boosts collaboration and discusses progress during daily standup meetings, and they use a Scrum Board to manage and monitor their project.
+Scrum
+> Divides a project into short iterations, usually between 1 – 4 weeks in length. Each iteration is called a "sprint". The Scrum Master leads the team, and they work together to deliver an iteration at the end of each Sprint. A Scrum team boosts collaboration and discusses progress during daily standup meetings, and they use a Scrum Board to manage and monitor their project.
 
-Kanban focuses on visualizing work, limiting the amount of work in progress, and maximizing flow. The team uses a Kanban board, which is broken down into visual signals (sticky notes, tickets), workflow columns (to-do, progress, complete), work-in-progress limits, a backlog section, and a delivery point.
+Kanban
+> Focuses on visualizing work, limiting the amount of work in progress, and maximizing flow. The team uses a Kanban board, which is broken down into visual signals (sticky notes, tickets), workflow columns (to-do, progress, complete), work-in-progress limits, a backlog section, and a delivery point.
 
-![Scrum vs Kanban](images/scrum_vs_kanban_quick_overview.png)
+![Scrum vs Kanban](images/sdlc/scrum_vs_kanban_quick_overview.png)
 
 ###### What Agile flavor to choose?
 
-More details in article[Agile : Scrum, Kanban & Scrumban](https://medium.com/@shehanb/agile-scrum-kanban-scrumban-cheatsheet-sprint-artifacts-ceremonies-software-jira-trello-scrumage-pmbok-e669d5dbf6f3)
+More details in article [Agile : Scrum, Kanban & Scrumban](https://medium.com/@shehanb/agile-scrum-kanban-scrumban-cheatsheet-sprint-artifacts-ceremonies-software-jira-trello-scrumage-pmbok-e669d5dbf6f3)
 
 All these methodologies aren’t prescriptive. High-performing teams discover what works for them and flex the system appropriately.
 
-![Scrum vs Kanban: head-to-head comparison](images/scrum_vs_kanban_cheatsheet.webp)
+![Scrum vs Kanban: head-to-head comparison](images/sdlc/scrum_vs_kanban_cheatsheet.webp)
 
 ###### Scrumban
 
 It is seems that Scrumban is good choice for current project.
 
-![Scrum to Scrumban](images/scrum_to_scrumban_cheetsheet.webp)
+![Scrum to Scrumban](images/sdlc/scrum_to_scrumban_cheetsheet.webp)
 
 ###### Software for backlog, workflow visualization and metrics
 

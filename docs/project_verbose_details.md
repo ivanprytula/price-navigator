@@ -3,10 +3,9 @@ myst:
   enable_extensions: ["colon_fence"]
 ---
 
-(verbose-details)=
-# Verbose details
+# Project verbose details
 
-- [Verbose details](#verbose-details)
+- [Project verbose details](#project-verbose-details)
   - [Requirements](#requirements)
   - [Installation](#installation)
   - [Project structure](#project-structure)
@@ -40,37 +39,38 @@ myst:
 
 ## Installation
 
-Run the following commands in your project directory.
+:::{admonition} NB
+:class: tip
 
-```shell
-make up
-```
+Check README.md page in project root for local and containerized setup
+:::
 
 ## Project structure
 
-```text
-myproject/
-    ├── manage.py
-    ├── myproject/
-    │   ├── __init__.py
-    │   ├── asgi.py
-    │   ├── settings.py
-    │   ├── urls.py
-    │   └── wsgi.py
-    └── myapp/
-        ├── __init__.py
-        ├── admin.py
-        ├── apps.py
-        ├── migrations/
-        │   └── __init__.py
-        ├── models.py
-        ├── tests.py
-        └── views.py
-```
+:::
+    myproject/
+        ├── manage.py
+        ├── myproject/
+        │   ├── __init__.py
+        │   ├── asgi.py
+        │   ├── settings.py
+        │   ├── urls.py
+        │   └── wsgi.py
+        └── myapp/
+            ├── __init__.py
+            ├── admin.py
+            ├── apps.py
+            ├── migrations/
+            │   └── __init__.py
+            ├── models.py
+            ├── tests.py
+            └── views.py
+:::
 
 ## System design and architecture
 
-todo: UML ERD etc
+![Price Navigator high-level architecture](images/project_architecture/high_level_scheme_price_navigator.png)
+![Price Navigator high-level ERD](images/project_architecture/high_level_erd_price_navigator.png)
 
 ## Tech Stack
 

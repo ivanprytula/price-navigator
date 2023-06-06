@@ -1,4 +1,4 @@
-# Best Practices
+# Python best practices
 
 - One virtual environment per project
   - Isolation
