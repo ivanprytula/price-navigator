@@ -47,7 +47,7 @@ jobs:
 
     env:
       # postgres://user:password@host:port/database
-      DATABASE_URL: 'postgres://postgres:postgres@localhost:5432/postgres'
+      TEST_DATABASE_URL: 'postgres://postgres:postgres@localhost:5432/test_price_navigator'
 
     steps:
       - name: Checkout Code Repository
