@@ -1,8 +1,3 @@
----
-myst:
-  enable_extensions: ["colon_fence"]
----
-
 # Project verbose details
 
 - [Project verbose details](#project-verbose-details)
@@ -39,32 +34,46 @@ myst:
 
 ## Installation
 
-:::{admonition} NB
-:class: tip
-
 Check README.md page in project root for local and containerized setup
-:::
 
 ## Project structure
 
-:::
-    myproject/
+    price_navigator/
         ├── manage.py
-        ├── myproject/
+        ├── config/
+        |   ├── settings
+        |       ├── __init__.py
+        |       ├── base.py
+        |       ├── local.py
+        |       ├── production.py
+        |       ├── test.py
         │   ├── __init__.py
         │   ├── asgi.py
-        │   ├── settings.py
+        │   ├── api_router.py
         │   ├── urls.py
         │   └── wsgi.py
-        └── myapp/
-            ├── __init__.py
-            ├── admin.py
-            ├── apps.py
-            ├── migrations/
-            │   └── __init__.py
+        └── price_navigator/
+                ├── static/
+                ├── templates/
+                ├── utils/
+                ├── __init__.py
+                ├── conftest.py  # pytest's fixtutes
+                ├── users/
+                    ├── api/
+                    ├── migrations/
+                    ├── tests/
+                    ├── __init__.py
+                    ├── admin.py
+                    ├── apps.py
+            ├── models.py
             ├── models.py
             ├── tests.py
+                    ├── models.py
+            ├── tests.py
             └── views.py
+            └── views.py
+:::
+                    └── views.py
 :::
 
 ## System design and architecture

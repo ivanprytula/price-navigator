@@ -1,5 +1,7 @@
 # Python best practices
 
+## General
+
 - One virtual environment per project
   - Isolation
   - Different projects have different dependency versions

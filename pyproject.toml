@@ -1,10 +1,22 @@
 # ==== pytest ====
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "--ds=config.settings.test --reuse-db"
+addopts = "--ds=config.settings.test --reuse-db --showlocals --maxfail=2"
 python_files = [
     "tests.py",
     "test_*.py",
+]
+required_plugins = ["pytest-django", "pytest-xdist"]
+filterwarnings = [
+    "error",
+]
+markers = [
+    # dummy markers for testing
+    "foo",
+    "bar",
+    "baz",
+    # conftest.py reorders tests moving slow ones to the end of the list
+    "slow",
 ]
 
 # ==== Coverage ====

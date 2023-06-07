@@ -1,5 +1,7 @@
 # Web application for efficient (easy and cheap) shopping of groceries & household items
 
+[![Build Status](https://img.shields.io/github/actions/workflow/status/ivanprytula/price-navigator/ci.yml?branch=main)](https://github.com/ivanprytula/price-navigator/actions/workflows/ci.yml?query=branch%3Amain)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ivanprytula/price-navigator/master.svg)](https://results.pre-commit.ci/latest/github/ivanprytula/price-navigator/master)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 ## Formulation of the current problem
@@ -83,20 +85,27 @@ cd price-navigator
 #### Local setup
 
 1. Start [status|stop] PostgreSQL server: `sudo systemctl start postgresql` or `sudo service postgresql start`
-2. Create a new PostgreSQL database with...
-   1. PostgreSQL client `psql` (steps below)
+2. Create a new PostgreSQL database with ...
+   1. PostgreSQL client `psql` (_steps below_)
    2. Shell CLI [createdb](https://www.postgresql.org/docs/current/app-createdb.html)
    3. pgAdmin
    4. Your preferable way
-3. Set the environment variables, there are 2 options:
-   1. Create `.env` file in the root of your project with all needed variables. Then `export DJANGO_READ_DOT_ENV_FILE=True`
-   2. Use a local environment manager like [direnv](https://direnv.net/)
-4. Dry run w/o migrations - just spin off _classic_ `./manage.py runserver` or `./manage.py runserver_plus` (w/ watchdog and Werkzeug debugger)
-5. Visit <http://127.0.0.1:8000/>
-6. Setting up your users:
+3. Create/activate a virtualenv
+   1. `python3.10 -m venv <virtual env path>`
+   2. `source <virtual env path>/bin/activate`
+   3. `pip install -r requirements.local.txt`
+4. Install pre-commit hook: `pre-commit install`
+5. Set the environment variables:
+   1. Create/copy `.env` file in the root of your project with all needed variables: `mv env.example.local .env` | `cp env.example.local .env`
+      1. then `export DJANGO_READ_DOT_ENV_FILE=True`
+      2. or use a local environment manager like [direnv](https://direnv.net/) (NB: you also need `.envrc` file)
+6. 'Dry run' w/o applying migrations - just spin off _classic_ `./manage.py runserver` or `./manage.py runserver_plus` (w/ watchdog and Werkzeug debugger)
+7. Or skip prev step and do 'full run': `./manage.py migrate` -> `./manage.py runserver 0.0.0.0:8000`
+8. Visit <http://127.0.0.1:8000/>
+9. Setting up your users:
    1. **normal user account**: just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
    2. `python manage.py createsuperuser`
-7. Run the following command from the project directory to build and serve HTML documentation: `make -C docs livehtml`
+10. Run the following command from the project directory to build and explore HTML documentation: `make -C docs livehtml`
 
 ```bash
 # verbose option
@@ -111,7 +120,7 @@ ALTER ROLE price_dwh_user SET default_transaction_isolation TO 'read committed';
 ALTER ROLE price_dwh_user SET timezone TO 'UTC';
 GRANT ALL PRIVILEGES ON DATABASE "price_navigator" to price_dwh_user;
 
-# jic, if you are in a hurry, here is one-liner option
+# jic, if you are in a hurry, here is simplified one-liner command
 sudo -u postgres psql -c 'create database price_navigator;'
 postgres=# \l  # list all databases
 ```

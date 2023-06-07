@@ -25,6 +25,8 @@ django.setup()
 project = "price-navigator"
 copyright = """2023, Ivan Prytula"""
 author = "Ivan Prytula"
+version = "0.1"
+release = "0.1"
 
 
 # -- General configuration ---------------------------------------------------

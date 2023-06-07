@@ -26,8 +26,14 @@
 
 ## Kill process on port
 
+```shell
 sudo lsof -i -P -n | grep <port number> # List who's using the port
 kill -9 <process id> (macOS) or sudo kill <process id> (Linux)
+
+# e.g.
+sudo lsof -i -P -n | grep 5432
+sudo kill -9 1234
+```
 
 ## Python related
 
@@ -36,6 +42,20 @@ kill -9 <process id> (macOS) or sudo kill <process id> (Linux)
 
 # find Django path in env
 python -c "import django; print(django.__path__)"
+
+./manage.py migrate --check
+git reset --soft HEAD~1
+
+git log --follow -p -- pyproject.toml
+git rebase -i HEAD~4
+
+p sha1
+p sha2
+s sha3
+s sha4
+# will squash 2, 3 and 4 commits into one >>> we need do `push --force`
+
+source "$( poetry env list --full-path | grep Activated | cut -d' ' -f1 )/bin/activate"
 ```
 
 ## PostgreSQL related
@@ -98,17 +118,15 @@ sudo find /usr -wholename '*/bin/postgres'
 # example: sudo sed -n 4p <$PGDATA>/postmaster.pid
 sudo sed -n 4p /var/lib/postgresql/13/main/postmaster.pid
 
-
 # Control cluster startup
 cat /etc/postgresql/14/main/start.conf
-
 ```
 
 ## grep
 
 snap info microk8s | grep installed
 
-## Docker
+## Docker Engine
 
 ````shell
 [sudo] systemctl (start|stop|restart) docker
@@ -162,7 +180,66 @@ volumes:
   - datavolume:/var/lib/mysql
 ```
 
-## Permissions
+```shell
+cd scripts/local_docker && docker compose up -d redis && cd -
+cd scripts/local_docker && docker compose stop && cd -
+
+docker compose exec db psql
+docker compose exec app python3
+```
+
+## Ruby
+
+```shell
+/usr/bin/zsh --login
+rvm use 3.1.2
+```
+
+### Hands-on shell commands
+
+#### Different
+
+```shell
+openssl rand -hex 32
+```
+
+#### Export var into shell
+
+```bash
+#!/bin/bash
+
+set -a
+# Automatically mark new and altered variables to be exported to subsequent environments.
+# set -o allexport
+
+export DJANGO_READ_DOT_ENV_FILE=True
+
+set +a
+# set +o allexport
+```
+
+#### Battery life
+
+```shell
+cd /sys/class/power_supply/BAT0/
+cat uevent
+```
+
+#### Disk usage
+
+```shell
+du -h --summarize --total
+du -h --all --exclude="venv" --exclude=".idea" --exclude="htmlcov" --exclude=".git" --exclude=".pytest_cache" --exclude="tmp"
+du -h -a/-s * | sort -h
+```
+
+#### Current system’s timezone
+
+```shell
+timedatectl
+```
+
+#### Permissions
 
 rwx rwx rwx = 111 111 111
 rw- rw- rw- = 110 110 110
@@ -193,57 +270,3 @@ r-- = 100 in binary = 4
 | | +-----------------------------------> 3. Group Permissions
 | +--------------------------------------> 2. Owner Permissions
 +----------------------------------------> 1. File Type
-
-## Ruby
-
-```shell
-/usr/bin/zsh --login
-rvm use 3.1.2
-```
-
-## Current system’s timezone
-
-```shell
-timedatectl
-```
-
-### Disk usage
-
-```shell
-du -h --summarize --total
-du -h --all --exclude="venv" --exclude=".idea" --exclude="htmlcov" --exclude=".git" --exclude=".pytest_cache" --exclude="tmp"
-du -h -a/-s * | sort -h
-```
-
-## Battery life
-
-```shell
-cd /sys/class/power_supply/BAT0/
-cat uevent
-```
-
-### hands-on shell commands
-
-```shell
-cd scripts/local_docker && docker compose up -d redis && cd -
-cd scripts/local_docker && docker compose stop && cd -
-pg_lsclusters
-
-docker compose exec db psql
-docker compose exec app python3
-
-
-./manage.py migrate --check
-git reset --soft HEAD~1
-
-git log --follow -p -- pyproject.toml
-git rebase -i HEAD~4
-
-p sha1
-p sha2
-s sha3
-s sha4
-# will squash 2, 3 and 4 commits into one >>> we need do `push --force`
-```
-
-source "$( poetry env list --full-path | grep Activated | cut -d' ' -f1 )/bin/activate"

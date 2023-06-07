@@ -6,6 +6,8 @@
 Welcome to price-navigator's documentation!
 ======================================================================
 
+.. sectionauthor:: Ivan Prytula <ivanprytula87@gmail.com>
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -15,7 +17,6 @@ Welcome to price-navigator's documentation!
    general_project_management
    python_best_practices
    users
-
 
 
 Indices and tables
