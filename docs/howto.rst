@@ -7,11 +7,9 @@ Get Started
 Documentation can be written as rst files in `price_navigator/docs`.
 
 
-To build and serve docs, use the command
+To build and serve docs, use the command::
 
-    ::
-
-        make livehtml
+    make livehtml
 
 from inside the `price_navigator/docs` directory.
 
@@ -29,9 +27,7 @@ Numpy or Google style docstrings will be picked up from project files and availa
 
 .. seealso:: For an in-use example, see the `page source <_sources/users.rst.txt>`_ for :ref:`users`.
 
-To compile all docstrings automatically into documentation source files, use the command:
+To compile all docstrings automatically into documentation source files, use the command::
 
-    ::
-
-        make apidocs
+    make apidocs
 

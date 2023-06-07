@@ -8,14 +8,27 @@ Welcome to price-navigator's documentation!
 
 .. sectionauthor:: Ivan Prytula <ivanprytula87@gmail.com>
 
+Setup, notes, knowledge base etc
+--------------------------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: TOC:
 
    howto
    project_verbose_details
    general_project_management
    python_best_practices
+   work_notes
+
+
+Modules' signatures and docstrings
+----------------------------------
+
+.. toctree::
+   :maxdepth: 2
+   :caption: TOC:
+
    users
 
 
