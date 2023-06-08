@@ -17,7 +17,7 @@ Setup, notes, knowledge base etc
 
    howto
    project_verbose_details
-   general_project_management
+   general_sdlc
    python_best_practices
    work_notes
 

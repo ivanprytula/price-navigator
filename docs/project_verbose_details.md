@@ -1,14 +1,20 @@
 # Project verbose details
 
-- [Project verbose details](#project-verbose-details)
-  - [Requirements](#requirements)
-  - [Installation](#installation)
-  - [Project structure](#project-structure)
-  - [System design and architecture](#system-design-and-architecture)
-  - [Tech Stack](#tech-stack)
-  - [Useful resources](#useful-resources)
-  - [Credits and gratitude](#credits-and-gratitude)
+[Requirements](#requirements)
 
+[Installation](#installation)
+
+[Project structure](#project-structure)
+
+[System design and architecture](#system-design-and-architecture)
+
+[Tech Stack](#tech-stack)
+
+[Useful resources](#useful-resources)
+
+[Credits and gratitude](#credits-and-gratitude)
+
+(#requirements)=
 ## Requirements
 
 - Knowledge of your operating system: basic commands and utilities to perform common tasks, such as file management, process management, user management, etc.
@@ -32,10 +38,12 @@
     - [Active account](https://azure.microsoft.com/en-us/) with free tier/enabled billing
     - Azure CLI [installed](https://learn.microsoft.com/en-us/cli/azure/)
 
+(#installation)=
 ## Installation
 
 Check README.md page in project root for local and containerized setup
 
+(#project-structure)=
 ## Project structure
 
     price_navigator/
@@ -76,11 +84,13 @@ Check README.md page in project root for local and containerized setup
                     └── views.py
 :::
 
+(#system-design-and-architecture)=
 ## System design and architecture
 
 ![Price Navigator high-level architecture](images/project_architecture/high_level_scheme_price_navigator.png)
 ![Price Navigator high-level ERD](images/project_architecture/high_level_erd_price_navigator.png)
 
+(#tech-stack)=
 ## Tech Stack
 
 In terms of _layers_:
@@ -175,6 +185,7 @@ In terms of _typical developer tools_:
 5. shell alias for Git commands
 6. cheat sheet of most common/oftenly used shell/CLI commands
 
+(#useful-resources)=
 ## Useful resources
 
 1. **Base/core**:
@@ -204,6 +215,7 @@ In terms of _typical developer tools_:
    2. <https://adamj.eu/tech/2022/06/21/optimize-postgresql-queries-from-django-using-pgmustard/>
    3.
 
+(#credits-and-gratitude)=
 ## Credits and gratitude
 
 1. <https://github.com/erayerdin/sos-django-template>
