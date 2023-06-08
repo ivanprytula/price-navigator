@@ -1,4 +1,4 @@
-# Project verbose details
+# Project --verbose details
 
 [Requirements](#requirements)
 

@@ -1,4 +1,4 @@
-# SDLC methodology
+# General SDLC
 
 Software/System Development Life Cycle
 
