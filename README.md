@@ -105,7 +105,13 @@ cd price-navigator
 9. Setting up your users:
    1. **normal user account**: just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
    2. `python manage.py createsuperuser`
-10. Run the following command from the project directory to build and explore HTML documentation: `make -C docs livehtml`
+10. Sanity checks of code quality: run test, type checks, linter, sort imports, formatter
+    1. `pytest -p no:warnings -v`
+    2. `mypy price_navigator/`
+    3. `flake8`
+    4. `isort .`
+    5. `black --config pyproject.toml .`
+11. Run the following command from the project directory to build and explore HTML documentation: `make -C docs livehtml`
 
 ```bash
 # verbose option

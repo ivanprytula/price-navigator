@@ -23,7 +23,7 @@ It was necessary to add such a fixture because the pytest job in the CI workflow
         settings.WHITENOISE_AUTOREFRESH = True
 
 
-Separate database env variables for main functionality and tests
+[Local setup] Separate database env variables for main functionality and tests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. In most basic case we oftenly use classic ``postgres`` user for main database and testing::

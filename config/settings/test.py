@@ -28,12 +28,3 @@ EMAIL_BACKEND = "django.core.mail.backends.locmem.EmailBackend"
 # DEBUGGING FOR TEMPLATES
 # ------------------------------------------------------------------------------
 TEMPLATES[0]["OPTIONS"]["debug"] = True  # type: ignore # noqa: F405
-
-# DATABASES
-# ------------------------------------------------------------------------------
-DATABASES = {
-    "default": env.db(
-        "TEST_DATABASE_URL",
-        default="postgres://test_price_navigator",
-    ),
-}

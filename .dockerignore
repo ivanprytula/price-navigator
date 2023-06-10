@@ -7,3 +7,11 @@
 .pre-commit-config.yaml
 venv
 .git
+
+cheatsheet_shell_commands.md
+env.example.local
+env.example.prod
+.pytest_cache/
+.mypy_cache/
+.env
+.envrc

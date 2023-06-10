@@ -213,7 +213,9 @@ In terms of _typical developer tools_:
 7. **Optimization**
    1. <https://www.citusdata.com/blog/2020/05/20/postgres-tips-for-django-and-python/>
    2. <https://adamj.eu/tech/2022/06/21/optimize-postgresql-queries-from-django-using-pgmustard/>
-   3.
+8. **Troubleshooting and debugging**
+   1. <https://stackoverflow.com/questions/26598738/how-to-create-user-database-in-script-for-docker-postgres>
+
 
 (#credits-and-gratitude)=
 ## Credits and gratitude

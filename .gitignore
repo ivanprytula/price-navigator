@@ -26,5 +26,4 @@ price_navigator/media/
 .pytest_cache/
 .env
 .envs/*
-!.envs/.local/
 .envrc

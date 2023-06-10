@@ -1,4 +1,23 @@
-# Commands That Will Change The Way You Use Linux Forever
+# Cheat sheet shell commands
+
+- [Cheat sheet shell commands](#cheat-sheet-shell-commands)
+  - [Commands That Will Change The Way You Use Linux Forever](#commands-that-will-change-the-way-you-use-linux-forever)
+  - [Kill process on port](#kill-process-on-port)
+  - [Python related](#python-related)
+  - [PostgreSQL related](#postgresql-related)
+  - [Docker Engine](#docker-engine)
+  - [Docker Compose](#docker-compose)
+  - [Ruby](#ruby)
+  - [Hands-on shell commands](#hands-on-shell-commands)
+    - [grep](#grep)
+    - [Different](#different)
+    - [Export var into shell](#export-var-into-shell)
+    - [Battery life](#battery-life)
+    - [Disk usage](#disk-usage)
+    - [Current system’s timezone](#current-systems-timezone)
+    - [Permissions](#permissions)
+
+## Commands That Will Change The Way You Use Linux Forever
 
 1. `cd -` : back to the last directory we've been to.
 2. `ctrl+l`: clear screen
@@ -116,15 +135,11 @@ sudo find /usr -wholename '*/bin/postgres'
 
 # Find your port
 # example: sudo sed -n 4p <$PGDATA>/postmaster.pid
-sudo sed -n 4p /var/lib/postgresql/13/main/postmaster.pid
+sudo sed -n 4p /var/lib/postgresql/14/main/postmaster.pid
 
 # Control cluster startup
 cat /etc/postgresql/14/main/start.conf
 ```
-
-## grep
-
-snap info microk8s | grep installed
 
 ## Docker Engine
 
@@ -158,6 +173,11 @@ docker run -d -p 8080:80 nginx
 # Stop and remove containers
 docker-compose down  # Stop container on current dir if there is a docker-compose.yml
 docker rm -fv $(docker ps -aq)  # Remove all containers
+
+docker exec -it yournamecontainer psql -U postgres -c "CREATE DATABASE mydatabase ENCODING 'utf8' TEMPLATE template0 LC_COLLATE 'C' LC_CTYPE 'C';"
+
+docker exec -it yournamecontainer psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE mydatabase TO user_name;"
+
 ````
 
 ## Docker Compose
@@ -195,15 +215,19 @@ docker compose exec app python3
 rvm use 3.1.2
 ```
 
-### Hands-on shell commands
+## Hands-on shell commands
 
-#### Different
+### grep
+
+snap info microk8s | grep installed
+
+### Different
 
 ```shell
 openssl rand -hex 32
 ```
 
-#### Export var into shell
+### Export var into shell
 
 ```bash
 #!/bin/bash
@@ -218,14 +242,14 @@ set +a
 # set +o allexport
 ```
 
-#### Battery life
+### Battery life
 
 ```shell
 cd /sys/class/power_supply/BAT0/
 cat uevent
 ```
 
-#### Disk usage
+### Disk usage
 
 ```shell
 du -h --summarize --total
@@ -233,13 +257,13 @@ du -h --all --exclude="venv" --exclude=".idea" --exclude="htmlcov" --exclude=".g
 du -h -a/-s * | sort -h
 ```
 
-#### Current system’s timezone
+### Current system’s timezone
 
 ```shell
 timedatectl
 ```
 
-#### Permissions
+### Permissions
 
 rwx rwx rwx = 111 111 111
 rw- rw- rw- = 110 110 110
