@@ -7,7 +7,7 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
 BUILDDIR      = ./_build
-APP = ../price_navigator
+APP = ../app
 
 
 .PHONY: help livehtml apidocs Makefile

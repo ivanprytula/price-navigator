@@ -2,6 +2,13 @@
 __pycache__/
 *.py[cod]
 
+# celery beat schedule file
+celerybeat-schedule
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
 # Unit test / coverage reports
 htmlcov/
 
@@ -10,6 +17,7 @@ venv/
 
 # Django stuff:
 db.sqlite3
+staticfiles/
 
 # Sphinx documentation
 docs/_build/
@@ -24,6 +32,9 @@ docs/_build/
 price_navigator/media/
 
 .pytest_cache/
+.ipython/
+price_navigator/static/webpack_bundles/
+webpack-stats.json
 .env
 .envs/*
 .envrc

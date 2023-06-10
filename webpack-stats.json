@@ -1,0 +1,30 @@
+{
+  "status": "done",
+  "assets": {
+    "css/project.233036de0a45e0cea169.css": {
+      "name": "css/project.233036de0a45e0cea169.css",
+      "path": "/app/price_navigator/static/webpack_bundles/css/project.233036de0a45e0cea169.css",
+      "publicPath": "/static/webpack_bundles/css/project.233036de0a45e0cea169.css"
+    },
+    "js/project-b1d43ec46f1876132787.js": {
+      "name": "js/project-b1d43ec46f1876132787.js",
+      "path": "/app/price_navigator/static/webpack_bundles/js/project-b1d43ec46f1876132787.js",
+      "publicPath": "/static/webpack_bundles/js/project-b1d43ec46f1876132787.js"
+    },
+    "js/vendors-b1d43ec46f1876132787.js": {
+      "name": "js/vendors-b1d43ec46f1876132787.js",
+      "path": "/app/price_navigator/static/webpack_bundles/js/vendors-b1d43ec46f1876132787.js",
+      "publicPath": "/static/webpack_bundles/js/vendors-b1d43ec46f1876132787.js"
+    }
+  },
+  "chunks": {
+    "project": [
+      "css/project.233036de0a45e0cea169.css",
+      "js/project-b1d43ec46f1876132787.js"
+    ],
+    "vendors": [
+      "js/vendors-b1d43ec46f1876132787.js"
+    ]
+  },
+  "publicPath": "/static/webpack_bundles/"
+}
