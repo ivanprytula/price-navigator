@@ -1,10 +1,8 @@
 # Web application for efficient (easy and cheap) shopping of groceries & household items
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/ivanprytula/price-navigator/ci.yml?branch=main)](https://github.com/ivanprytula/price-navigator/actions/workflows/ci.yml?query=branch%3Amain)
+[![CI](https://github.com/ivanprytula/price-navigator/actions/workflows/ci.yml/badge.svg)](https://github.com/ivanprytula/price-navigator/actions/workflows/ci.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ivanprytula/price-navigator/main.svg)](https://results.pre-commit.ci/latest/github/ivanprytula/price-navigator/main)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-
-![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
 
 ## Formulation of the current problem
 
