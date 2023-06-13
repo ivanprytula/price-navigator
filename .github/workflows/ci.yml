@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     # These variables are set and scoped at the _job level_
     env:
@@ -45,14 +45,6 @@ jobs:
       - name: Build the Stack
         # https://docs.docker.com/compose/extends/#understanding-multiple-compose-files
         run: docker-compose -f docker-compose.yml -f docker-compose.ci.yml up --build -d
-
-  # With no caching at all the entire ci process takes 4m 30s to complete!
-  pytest:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
 
       - name: Run Django Tests
         run: docker-compose -f docker-compose.yml -f docker-compose.ci.yml run django pytest
