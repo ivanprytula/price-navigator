@@ -108,7 +108,7 @@ sudo service postgresql start
 
 # start specific server
 systemctl start postgresql@14-main
-sudo service postgresql start ##
+sudo service postgresql start
 sudo service postgresql-14.2 start
 
 ## 2. STOP
