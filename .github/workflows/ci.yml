@@ -14,7 +14,6 @@ on:
   push:
     branches: [$default-branch, 'develop']
     paths-ignore: ['docs/**']
-  workflow_dispatch:
 
 concurrency:
   group: ${{ github.head_ref || github.run_id }}
