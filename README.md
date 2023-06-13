@@ -116,7 +116,7 @@ cd price-navigator
 11. Run the following command from the project directory to build and explore HTML documentation: `make -C docs livehtml`
 
 ```bash
-# verbose option
+# verbose option (2.1)
 sudo -u postgres -i psql
 
 CREATE DATABASE price_navigator;
