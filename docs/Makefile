@@ -20,6 +20,9 @@ help:
 livehtml:
 	sphinx-autobuild -b html --open-browser --port 9000 --watch $(APP) -c . $(SOURCEDIR) $(BUILDDIR)/html
 
+livehtml-in-docker:
+	sphinx-autobuild -b html --open-browser --host 0.0.0.0 --port 9000 --watch $(APP) -c . $(SOURCEDIR) $(BUILDDIR)/html
+
 # Outputs rst files from django application code
 apidocs:
 	sphinx-apidoc -o $(SOURCEDIR)/api $(APP)

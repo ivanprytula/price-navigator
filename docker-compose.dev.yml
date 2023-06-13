@@ -1,0 +1,28 @@
+# Local dev overrides
+# When you run `docker compose up` it reads the overrides automatically.
+
+# docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+services:
+  django: &django
+    volumes:
+      - .:/app:z
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    environment:
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - DJANGO_SETTINGS_MODULE
+      - DJANGO_SECRET_KEY
+      - DATABASE_URL
+      - REDIS_URL
+
+  postgres:
+    volumes:
+      - price_navigator_local_postgres_data:/var/lib/postgresql/data
+      - price_navigator_local_postgres_data_backups:/backups
+    env_file:
+      - ./.envs/.local/.postgres

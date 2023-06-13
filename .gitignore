@@ -36,5 +36,7 @@ price_navigator/media/
 price_navigator/static/webpack_bundles/
 webpack-stats.json
 .env
+.env.local
 .envs/*
 .envrc
+load_env_vars.sh

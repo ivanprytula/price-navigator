@@ -1,10 +1,4 @@
-version: '3'
-
-volumes:
-  production_postgres_data: {}
-  production_postgres_data_backups: {}
-  production_traefik: {}
-
+# docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 services:
   django: &django
     build:
@@ -65,3 +59,8 @@ services:
     <<: *django
     image: price_navigator_production_flower
     command: /start-flower
+
+volumes:
+  production_postgres_data:
+  production_postgres_data_backups:
+  production_traefik:

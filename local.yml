@@ -1,8 +1,14 @@
-version: '3'
+# Canonical configuration for the services
 
-volumes:
-  price_navigator_local_postgres_data: {}
-  price_navigator_local_postgres_data_backups: {}
+# The order of precedence (highest to lowest) is as follows:
+
+# Set using docker compose run -e in the CLI
+# Substituted from your shell
+# Set using the environment attribute in the Compose file
+# Use of the --env-file argument in the CLI
+# Use of the env_file attribute in the Compose file
+# Set using an .env file placed at base of your project directory
+# Set in a container image in the ENV directive. Having any ARG or ENV setting in a Dockerfile evaluates only if there is no Docker Compose entry for environment, env_file or run --env.
 
 services:
   django: &django
@@ -98,3 +104,13 @@ services:
     command: npm run dev
     ports:
       - '3000:3000'
+
+volumes:
+  price_navigator_local_postgres_data:
+    name: 'price-navigator-warehouse'
+    labels:
+      com.example.description: 'Database volume'
+      com.example.department: 'IT/Ops'
+      com.example.label-with-empty-value: ''
+  price_navigator_local_postgres_data_backups:
+    name: 'price-navigator-backups-dir-for-warehouse'

@@ -4,6 +4,8 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ivanprytula/price-navigator/main.svg)](https://results.pre-commit.ci/latest/github/ivanprytula/price-navigator/main)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
 ## Formulation of the current problem
 
 No easy(!) way of having head-to-head price comparison of specific food items between different shops on specific day/period. Why it is so?

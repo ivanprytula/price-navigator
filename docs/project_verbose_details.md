@@ -215,6 +215,8 @@ In terms of _typical developer tools_:
    2. <https://adamj.eu/tech/2022/06/21/optimize-postgresql-queries-from-django-using-pgmustard/>
 8. **Troubleshooting and debugging**
    1. <https://stackoverflow.com/questions/26598738/how-to-create-user-database-in-script-for-docker-postgres>
+   2. <https://docs.docker.com/compose/environment-variables/envvars-precedence/>
+   3. <https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally>
 
 
 (#credits-and-gratitude)=
