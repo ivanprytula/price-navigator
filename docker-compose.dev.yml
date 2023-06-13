@@ -19,6 +19,8 @@ services:
       - DJANGO_SECRET_KEY
       - DATABASE_URL
       - REDIS_URL
+      - CELERY_FLOWER_USER
+      - CELERY_FLOWER_PASSWORD
 
   postgres:
     volumes:
@@ -26,3 +28,7 @@ services:
       - price_navigator_local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres
+
+  docs:
+    env_file:
+      - ./.envs/.local/.django

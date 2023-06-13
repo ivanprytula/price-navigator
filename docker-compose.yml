@@ -22,9 +22,6 @@ services:
       - redis
     volumes:
       - .:/app:z
-    env_file:
-      - ./.envs/.local/.django
-      - ./.envs/.local/.postgres
     ports:
       - '8000:8000'
     command: /start
@@ -38,8 +35,6 @@ services:
     volumes:
       - price_navigator_local_postgres_data:/var/lib/postgresql/data
       - price_navigator_local_postgres_data_backups:/backups
-    env_file:
-      - ./.envs/.local/.postgres
 
   docs:
     image: price_navigator_local_docs
@@ -47,8 +42,6 @@ services:
     build:
       context: .
       dockerfile: ./compose/local/docs/Dockerfile
-    env_file:
-      - ./.envs/.local/.django
     volumes:
       - ./docs:/docs:z
       - ./config:/app/config:z
