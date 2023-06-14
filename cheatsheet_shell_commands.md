@@ -1,6 +1,63 @@
 # Cheat sheet shell commands
 
+## Often used
+
+```shell
+man man
+alias git st='git status'
+ls
+ls -la
+ls | head
+ls -l; echo "hello"
+ls -l && echo "hello"
+cd
+cd ..
+cd ../..
+cd -
+pwd
+uname -ra
+who
+whoami
+date
+time
+uptime
+du
+reset
+ctrl+l
+reboot
+cp
+mv
+cat -b hello.txt
+tail -n, --lines=[+]NUM 5 hello.txt
+head -n, --lines=[-]NUM 5 hello.txt
+more
+less
+env
+echo "Hello"
+echo "Hello" > hello.txt
+echo $(pwd)
+history
+!2023
+ctrl+u
+ctrl+a
+ctrl+e
+ctrl+ arrow left/right
+export PATH=/home/username/.local/bin:$PATH
+top
+pushd .
+popd
+vi /etc/ssh/sshd_config  # Esc -> :q
+nano /etc/ssh/sshd_config
+sudo !!
+find -name "docker-*"
+touch hello.txt
+mkdir test
+truncate --size 0 hello.txt
+
+```
+
 - [Cheat sheet shell commands](#cheat-sheet-shell-commands)
+  - [Often used](#often-used)
   - [Commands That Will Change The Way You Use Linux Forever](#commands-that-will-change-the-way-you-use-linux-forever)
   - [Kill process on port](#kill-process-on-port)
   - [Python related](#python-related)
