@@ -1,5 +1,7 @@
 # Web application for efficient (easy and cheap) shopping of groceries & household items
 
+![language](https://img.shields.io/badge/language-python-blue?style)
+[![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
 [![CI](https://github.com/ivanprytula/price-navigator/actions/workflows/ci.yml/badge.svg)](https://github.com/ivanprytula/price-navigator/actions/workflows/ci.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ivanprytula/price-navigator/main.svg)](https://results.pre-commit.ci/latest/github/ivanprytula/price-navigator/main)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
@@ -133,7 +135,43 @@ postgres=# \l  # list all databases
 
 #### Dockerized setup
 
+##### Development setup
+
 ```bash
+
+# Configure ENV vars
+# OPTION 1. Load/source into shell vars
+
+# check current $SHELL environment vars
+env
+
+# double-check that load_env_vars.sh file is executable, 'x' must be in OWNER permissions
+ls -l --human-readable
+-rwxr-xr-x   1 OWNER GROUP OTHERS  size Jun 13 03:50 load_env_vars.sh
+# if not:
+chmod u=rwx,go=r load_env_vars.sh
+# if in rush:
+chmod +x load_env_vars.sh
+
+. ./load_env_vars.sh
+# or
+source ./load_env_vars.sh
+
+# confirm that project env vars in $SHELL
+env
+
+# OPTION 2. Use dedicated files in .envs/.local/
+
+
+
+# 2. Build and spin containers
+make build
 make up
+
+# dive deep inside django & db containers
+make sh-django
+make sh-db
+
+# stop and remove containers
 make down
 ```

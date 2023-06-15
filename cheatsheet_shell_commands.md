@@ -6,7 +6,7 @@
 man man
 alias git st='git status'
 ls
-ls -la
+ls -la --human-readable
 ls | head
 ls -l; echo "hello"
 ls -l && echo "hello"

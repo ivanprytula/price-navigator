@@ -69,3 +69,9 @@ But with just one DATABASE_URL in ``settings/test.py`` we've got the same error 
     E  RuntimeWarning: Normally Django will use a connection to the 'postgres' database to avoid running initialization queries against the production database when it's not needed (for example, when running tests). Django was unable to create a connection to the 'postgres' database and will use the first PostgreSQL database instead.
 
 Thus, we need to add TEST_DATABASE_URL to ``settings/test.py`` and ``ci.yml`` > pytest job.
+
+Docker Compose services local setup specificity
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In case of using combo/base + override compose files ``docker compose -f docker-compose.yml -f docker-compose.dev.yml`` for celeryworker/celerybeat/flower services we **must also** add ``env_file`` attributes with reference to files with env vars.
+
