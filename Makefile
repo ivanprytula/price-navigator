@@ -1,8 +1,11 @@
 ####################################################################################################################
 # Setup containers
 
+build:
+	docker compose -f local.yml -f docker-compose.dev.yml build
+
 up:
-	docker compose -f local.yml -f docker-compose.dev.yml up --build -d
+	docker compose -f local.yml -f docker-compose.dev.yml up -d
 
 down:
 	docker compose -f local.yml -f docker-compose.dev.yml down
@@ -23,15 +26,15 @@ pytest:
 	docker exec -it price_navigator_local_django pytest -p no:warnings -v
 
 format:
-	docker exec django python -m black --config pyproject.toml .
+	docker exec price_navigator_local_django python -m black --config pyproject.toml .
 
 isort:
-	docker exec django isort .
+	docker exec price_navigator_local_django isort .
 
 type:
-	docker exec django mypy --ignore-missing-imports
+	docker exec price_navigator_local_django mypy --ignore-missing-imports
 
 lint:
-	docker exec django flake8
+	docker exec price_navigator_local_django flake8
 
 ci: isort format type lint pytest
