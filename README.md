@@ -165,7 +165,6 @@ env
 
 
 # 2. Build and spin containers
-make build
 make up
 
 # dive deep inside django & db containers

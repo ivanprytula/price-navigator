@@ -5,7 +5,7 @@ Specific problems/issues solved while setup and working on this project
 -----------------------------------------------------------------------
 
 [Local setup] Get rid of whitenoise "No directory at" warning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It was necessary to add such a fixture because the pytest job in the CI workflow had failed.
 
@@ -27,7 +27,7 @@ It was necessary to add such a fixture because the pytest job in the CI workflow
 
 
 [Local setup] Separate database env variables for main functionality and tests
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. In most basic case we oftenly use classic ``postgres`` user for main database and testing::
 
@@ -73,5 +73,5 @@ Thus, we need to add TEST_DATABASE_URL to ``settings/test.py`` and ``ci.yml`` > 
 Docker Compose services local setup specificity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In case of using combo/base + override compose files ``docker compose -f docker-compose.yml -f docker-compose.dev.yml`` for celeryworker/celerybeat/flower services we **must also** add ``env_file`` attributes with reference to files with env vars.
+In case of using combo/base + override compose files ``docker compose -f local.yml -f docker-compose.dev.yml`` for celeryworker/celerybeat/flower services we **must also** inherit **env_file** attrs from django service with shortcut ``<<: *django``.
 

@@ -10,7 +10,6 @@ services:
       - DJANGO_SECRET_KEY
       - DATABASE_URL
       - REDIS_URL
-      # - CELERY_BROKER_URL
       - CELERY_FLOWER_USER
       - CELERY_FLOWER_PASSWORD
 
@@ -22,12 +21,12 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
 
-  celeryworker:
-    environment:
-      - REDIS_URL
-      # - CELERY_BROKER_URL
+  # celeryworker:
+  #   environment:
+  # - REDIS_URL
+  # - CELERY_BROKER_URL
 
-  celerybeat:
-    environment:
-      - REDIS_URL
-      # - CELERY_BROKER_URL
+  # celerybeat:
+  #   environment:
+  #     - REDIS_URL
+  # - CELERY_BROKER_URL

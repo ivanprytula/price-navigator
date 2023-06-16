@@ -1,0 +1,46 @@
+# Local dev overrides
+
+# docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+services:
+  django: &django
+    volumes:
+      - .:/app:z
+    environment:
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - DJANGO_SETTINGS_MODULE
+      - DJANGO_SECRET_KEY
+      - DATABASE_URL
+      - REDIS_URL
+      - CELERY_FLOWER_USER
+      - CELERY_FLOWER_PASSWORD
+
+  postgres:
+    volumes:
+      - price_navigator_local_postgres_data:/var/lib/postgresql/data
+      - price_navigator_local_postgres_data_backups:/backups
+    environment:
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+  docs:
+    volumes:
+      - ./docs:/docs:z
+      - ./config:/app/config:z
+      - ./price_navigator:/app/price_navigator:z
+    environment:
+      - DATABASE_URL
+      - REDIS_URL
+      - DJANGO_SETTINGS_MODULE
+
+  node:
+    volumes:
+      - .:/app:z
+      # http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
+      - /app/node_modules

@@ -1,14 +1,11 @@
 ####################################################################################################################
 # Setup containers
 
-build:
-	docker compose -f local.yml build
-
 up:
-	docker compose -f local.yml up -d
+	docker compose -f local.yml -f docker-compose.dev.yml up --build -d
 
 down:
-	docker compose -f local.yml down
+	docker compose -f local.yml -f docker-compose.dev.yml down
 
 sh-django:
 	docker exec -ti price_navigator_local_django bash
@@ -23,7 +20,7 @@ check-db:
 	docker exec -ti price_navigator_local_postgres psql -U postgres -c 'SELECT 1;'
 
 pytest:
-	docker exec django pytest -p no:warnings -v
+	docker exec -it price_navigator_local_django pytest -p no:warnings -v
 
 format:
 	docker exec django python -m black --config pyproject.toml .
