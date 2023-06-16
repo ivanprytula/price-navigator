@@ -13,6 +13,8 @@
 services:
   django: &django
     build:
+      # https://docs.docker.com/compose/compose-file/build/#dockerfile
+      # dockerfile sets an alternate Dockerfile. A relative path MUST be resolved from the build context.
       context: .
       dockerfile: ./compose/local/django/Dockerfile
     image: price_navigator_local_django
@@ -20,8 +22,7 @@ services:
     depends_on:
       - postgres
       - redis
-    volumes:
-      - .:/app:z
+    #  map ports on host with container
     ports:
       - '8000:8000'
     command: /start
@@ -32,9 +33,6 @@ services:
       dockerfile: ./compose/production/postgres/Dockerfile
     image: price_navigator_production_postgres
     container_name: price_navigator_local_postgres
-    volumes:
-      - price_navigator_local_postgres_data:/var/lib/postgresql/data
-      - price_navigator_local_postgres_data_backups:/backups
 
   docs:
     image: price_navigator_local_docs
@@ -42,10 +40,6 @@ services:
     build:
       context: .
       dockerfile: ./compose/local/docs/Dockerfile
-    volumes:
-      - ./docs:/docs:z
-      - ./config:/app/config:z
-      - ./price_navigator:/app/price_navigator:z
     ports:
       - '9000:9000'
     command: /start-docs
@@ -56,6 +50,9 @@ services:
 
   celeryworker:
     <<: *django
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
     image: price_navigator_local_celeryworker
     container_name: price_navigator_local_celeryworker
     depends_on:
@@ -66,6 +63,9 @@ services:
 
   celerybeat:
     <<: *django
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
     image: price_navigator_local_celerybeat
     container_name: price_navigator_local_celerybeat
     depends_on:
@@ -76,6 +76,9 @@ services:
 
   flower:
     <<: *django
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
     image: price_navigator_local_flower
     container_name: price_navigator_local_flower
     ports:
@@ -90,20 +93,6 @@ services:
     container_name: price_navigator_local_node
     depends_on:
       - django
-    volumes:
-      - .:/app:z
-      # http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
-      - /app/node_modules
     command: npm run dev
     ports:
       - '3000:3000'
-
-volumes:
-  price_navigator_local_postgres_data:
-    name: 'price-navigator-warehouse'
-    labels:
-      com.example.description: 'Database volume'
-      com.example.department: 'IT/Ops'
-      com.example.label-with-empty-value: ''
-  price_navigator_local_postgres_data_backups:
-    name: 'price-navigator-backups-dir-for-warehouse'

@@ -1,5 +1,6 @@
 # define an alias for the specific python version used in this file.
 FROM python:3.11.4-slim-bullseye as python
+LABEL maintainer="Ivan Prytula <ivanprytula87@gmail.com>"
 
 # Python build stage
 FROM python as python-build-stage
@@ -27,7 +28,9 @@ FROM python as python-run-stage
 ARG BUILD_ENVIRONMENT=local
 ARG APP_HOME=/app
 
+# set environment variables
 ENV PYTHONUNBUFFERED 1
+# Python won't try to write .pyc files
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV BUILD_ENV ${BUILD_ENVIRONMENT}
 

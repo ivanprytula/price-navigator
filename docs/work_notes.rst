@@ -75,3 +75,11 @@ Docker Compose services local setup specificity
 
 In case of using combo/base + override compose files ``docker compose -f local.yml -f docker-compose.dev.yml`` for celeryworker/celerybeat/flower services we **must also** inherit **env_file** attrs from django service with shortcut ``<<: *django``.
 
+In most cases, it’s best to put each Dockerfile in an empty directory. Then, add to that directory only the files needed for building the Dockerfile. To increase the build’s performance, you can exclude files and directories by adding a .dockerignore file to that directory as well.
+
+Refs:
+
+* `docker build using a .dockerignore file <https://docs.docker.com/engine/reference/commandline/build/#use-a-dockerignore-file>`_
+* `.dockerignore file details <https://docs.docker.com/engine/reference/builder/#dockerignore-file>`_
+
+NB: removing `.ipython` dir was enough to re-build images. If not - remove also `.mypy_cache` / `.pytest_cache`

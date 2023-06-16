@@ -161,7 +161,9 @@ source ./load_env_vars.sh
 env
 
 # OPTION 2. Use dedicated files in .envs/.local/
-
+# NB: read if you have Docker Engine 23.0+ version
+docker info
+# https://docs.docker.com/engine/reference/commandline/build/#use-a-dockerignore-file
 
 
 # 2. Build and spin containers

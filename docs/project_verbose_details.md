@@ -202,6 +202,7 @@ In terms of _typical developer tools_:
    1. <https://www.buchanan.com/database-performance-tuning-techniques/>
    2. <https://www.digitalocean.com/community/tutorials/how-to-secure-your-django-application-with-a-content-security-policy>
    3. <https://www.laac.dev/blog/content-security-policy-using-django/>
+   4. <https://github.com/dnaprawa/dockerfile-best-practices>
 4. **General articles/blogs/books**
    1. <https://bytebytego.com/courses/system-design-interview/foreword>
    2. <https://www.startdataengineering.com/>

@@ -2,13 +2,13 @@
 # Setup containers
 
 build:
-	docker compose -f local.yml -f docker-compose.dev.yml build
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml build
 
 up:
-	docker compose -f local.yml -f docker-compose.dev.yml up -d
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
 down:
-	docker compose -f local.yml -f docker-compose.dev.yml down
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml  down
 
 sh-django:
 	docker exec -ti price_navigator_local_django bash
@@ -32,7 +32,7 @@ isort:
 	docker exec price_navigator_local_django isort .
 
 type:
-	docker exec price_navigator_local_django mypy --ignore-missing-imports
+	docker exec price_navigator_local_django mypy --ignore-missing-imports price_navigator/
 
 lint:
 	docker exec price_navigator_local_django flake8

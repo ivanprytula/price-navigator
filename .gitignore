@@ -40,3 +40,4 @@ webpack-stats.json
 .envs/*
 .envrc
 load_env_vars.sh
+sandbox/
