@@ -15,4 +15,5 @@ env.example.prod
 .mypy_cache/
 .env
 .envrc
+.export_env_vars.sh
 sandbox/

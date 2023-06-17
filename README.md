@@ -139,8 +139,18 @@ postgres=# \l  # list all databases
 
 ```bash
 
-# Configure ENV vars
-# OPTION 1. Load/source into shell vars
+# OPTION 1. Use dedicated files in .envs/.local/
+
+# [!] This option is currently used (17-06-2023)
+# docker-compose.yml + docker-compose.dev.yml
+
+# NB: read if you have Docker Engine 23.0+ version
+docker info
+# https://docs.docker.com/engine/reference/commandline/build/#use-a-dockerignore-file
+
+# OPTION 2. Load environment variables into shell
+# This method is similar to CI as on CI pipeline we have env vars (plain text) and secrets (configured for repository)
+# For this use: docker-compose.yml + docker-compose.dev-with-environment-attribute.yml
 
 # check current $SHELL environment vars
 env
@@ -160,13 +170,10 @@ source ./load_env_vars.sh
 # confirm that project env vars in $SHELL
 env
 
-# OPTION 2. Use dedicated files in .envs/.local/
-# NB: read if you have Docker Engine 23.0+ version
-docker info
-# https://docs.docker.com/engine/reference/commandline/build/#use-a-dockerignore-file
 
 
 # 2. Build and spin containers
+make build
 make up
 
 # dive deep inside django & db containers

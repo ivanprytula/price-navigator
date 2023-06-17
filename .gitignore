@@ -39,5 +39,5 @@ webpack-stats.json
 .env.local
 .envs/*
 .envrc
-load_env_vars.sh
+export_env_vars.sh
 sandbox/

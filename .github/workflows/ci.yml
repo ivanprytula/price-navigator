@@ -35,8 +35,6 @@ jobs:
       # postgres://USER:PASSWORD@HOST:PORT/NAME
       DATABASE_URL: postgres://$POSTGRES_USER:${{ secrets.POSTGRES_PASSWORD }}@$POSTGRES_HOST:$POSTGRES_PORT/$POSTGRES_DB
       REDIS_URL: redis://redis:6379/0
-      CELERY_FLOWER_USER: debug
-      CELERY_FLOWER_PASSWORD: debug
 
     steps:
       - name: Checkout Code Repository

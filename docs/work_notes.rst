@@ -83,3 +83,6 @@ Refs:
 * `.dockerignore file details <https://docs.docker.com/engine/reference/builder/#dockerignore-file>`_
 
 NB: removing `.ipython` dir was enough to re-build images. If not - remove also `.mypy_cache` / `.pytest_cache`
+
+Changing export USE_DOCKER=true >> export USE_DOCKER=True in ``export_env_vars.sh`` as well as ``if env.bool("USE_DOCKER", default=False):`` fixed missed debug-toolbar when use build/up containers with command:
+``docker compose -f docker-compose.yml -f docker-compose.dev-with-environment-attribute.yml up --build``.

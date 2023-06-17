@@ -10,8 +10,6 @@ services:
       - DJANGO_SECRET_KEY
       - DATABASE_URL
       - REDIS_URL
-      - CELERY_FLOWER_USER
-      - CELERY_FLOWER_PASSWORD
 
   postgres:
     environment:
