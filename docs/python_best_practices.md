@@ -48,10 +48,44 @@
 - Remove unused variables
 - Follow PEP-8 naming conventions
 
-## [5 Tips To Achieve Low Coupling In Your Python Code](https://www.youtube.com/watch?v=qR4-PBLUZNw)
+## 5 Tips To Achieve Low Coupling In Your Python Code
+
+[source link](https://www.youtube.com/watch?v=qR4-PBLUZNw)
 
 - Tip 1: Avoid deep inheritance relationships
 - Tip 2: Separate creating resources from using them
 - Tip 3: Introduce abstractions
 - Tip 4: Avoid inappropriate intimacy
 - Tip 5: Introduce an intermediate data structure
+
+## Specifying Versions of a Package
+
+[Pipenv documentation](https://pipenv-fork.readthedocs.io/en/latest/basics.html#specifying-versions-of-a-package)
+
+The use of ~= is preferred over the == identifier as the latter prevents pip/pipenv/poetry/etc from updating the packages.
+It locks the major version of the package and install version 1.2 and any **minor** updates, but **not 2.0**.
+
+```shell
+$ pip install "requests~=1.2"
+```
+
+## Testing
+
+1. If it can break, it should be tested. This includes models, views, forms, templates, validators, and so forth.
+2. Each test should generally only test one function.
+3. Keep it simple. You do not want to have to write tests on top of other tests.
+4. Run tests whenever code is PULLed or PUSHed from the repo and in the staging environment before PUSHing to production.
+5. When upgrading to a newer version of Django:
+   - upgrade locally,
+   - run your test suite,
+   - fix bugs,
+   - PUSH to the repo and staging, and then
+   - test again in staging before shipping the code.
+
+## English in IT area
+
+1. Emphasis on **functional** language, constant expressions that customers use in the work environment.
+2. Phrases like "could you be so kind", "I was wondering if you could", more "please" and "thank you" will help make English more polite.
+3. Objectives in the ability to **communicate** effectively. Therefore, it is important to emphasize the development of **listening** skills.
+4. Certificates of English - IELTS, TOEFL, FCE, CPE - adequate tests. It's good to have them valid/"fresh".
+5. Adequate evaluation of English level - speaking, writing, listening and reading.

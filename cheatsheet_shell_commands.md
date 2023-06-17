@@ -117,7 +117,7 @@ sudo kill -9 1234
 #!/bin/bash
 
 # find Django path in env
-python -c "import django; print(django.__path__)"
+python3 -c "import django; print(django.__path__)"
 
 ./manage.py migrate --check
 git reset --soft HEAD~1
@@ -235,6 +235,7 @@ docker exec -it yournamecontainer psql -U postgres -c "CREATE DATABASE mydatabas
 
 docker exec -it yournamecontainer psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE mydatabase TO user_name;"
 
+docker rmi -f $(docker images -f "dangling=true" -q)
 ````
 
 ## Docker Compose
@@ -282,6 +283,9 @@ snap info microk8s | grep installed
 
 ```shell
 openssl rand -hex 32
+
+chmod +x ./setup-scripts/*.sh
+cat /etc/*-release
 ```
 
 ### Export var into shell

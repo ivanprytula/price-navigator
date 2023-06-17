@@ -2,7 +2,6 @@ Work notes
 ==========
 
 Specific problems/issues solved while setup and working on this project
------------------------------------------------------------------------
 
 [Local setup] Get rid of whitenoise "No directory at" warning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -82,7 +81,30 @@ Refs:
 * `docker build using a .dockerignore file <https://docs.docker.com/engine/reference/commandline/build/#use-a-dockerignore-file>`_
 * `.dockerignore file details <https://docs.docker.com/engine/reference/builder/#dockerignore-file>`_
 
-NB: removing `.ipython` dir was enough to re-build images. If not - remove also `.mypy_cache` / `.pytest_cache`
+**NB:** removing `.ipython` dir was enough to re-build images. If not - remove also `.mypy_cache` / `.pytest_cache`
 
 Changing export USE_DOCKER=true >> export USE_DOCKER=True in ``export_env_vars.sh`` as well as ``if env.bool("USE_DOCKER", default=False):`` fixed missed debug-toolbar when use build/up containers with command:
 ``docker compose -f docker-compose.yml -f docker-compose.dev-with-environment-attribute.yml up --build``.
+
+How to debug in running container with breakpoint()?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Option 1
+~~~~~~~~~
+
+Check  `coockiecutter-django docs <https://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html#ipdb>`_
+
+Option 2 (old tip, need to double-check)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ The built-in breakpoint(), when called with defaults, can be used instead of ``import pdb; pdb.set_trace()``
+1. In docker-compose.yml add these lines for **django** service `link. <https://docs.docker.com/compose/compose-file/compose-file-v3/#domainname-hostname-ipc-mac_address-privileged-read_only-shm_size-stdin_open-tty-user-working_dir>`_
+
+.. code-block::
+
+    stdin_open: true
+    tty: true
+
+2. Re-run containers/services
+3. docker attach <container_id_of_django_posts_to_telegram_web>
+4. You can interact with container's stdin/stdout/stderr, i.e. with (Pdb).
