@@ -16,11 +16,13 @@ sh-django:
 sh-db:
 	docker exec -ti price_navigator_local_postgres bash
 
-####################################################################################################################
-# Testing, auto formatting, type checks, & Lint checks
+psql-db:
+	docker exec -ti price_navigator_local_postgres psql -U postgres
 
 check-db:
 	docker exec -ti price_navigator_local_postgres psql -U postgres -c 'SELECT 1;'
+####################################################################################################################
+# Testing, auto formatting, type checks, & Lint checks
 
 pytest:
 	docker exec -it price_navigator_local_django pytest -p no:warnings -v

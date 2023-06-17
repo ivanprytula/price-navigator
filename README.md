@@ -182,4 +182,29 @@ make sh-db
 
 # stop and remove containers
 make down
+
+# Connect to db in VSCode with SQLTools extension
+# 1.
+docker inspect price_navigator_local_postgres  # container name
+# 2. find in output line:
+"IPAddress": "192.168.80.3", # address could be another
+# 3. use this IPAddress and other data from .postgres/.env file to config connection
+
+# 4. example
+{
+  "previewLimit": 50,
+  "server": "192.168.80.3",
+  "port": 5432,
+  "driver": "PostgreSQL",
+  "name": "price_navigator_docker",
+  "database": "postgres",
+  "username": "postgres"
+}
 ```
+
+### Working process
+
+#### Main URLs
+
+- [Homepage](http://127.0.0.1:8000/)
+- [Admin panel](http://127.0.0.1:8000/admin/)
