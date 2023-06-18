@@ -171,7 +171,6 @@ source ./load_env_vars.sh
 env
 
 
-
 # 2. Build and spin containers
 make build
 make up
@@ -203,6 +202,10 @@ docker inspect price_navigator_local_postgres  # container name
 ```
 
 ### Working process
+
+- Check `Makefile` for shortened versions of verbose commands
+- Explore and use Django management commands: `./manage.py --help` and [django-extensions](https://github.com/django-extensions/django-extensions) commands
+-
 
 #### Main URLs
 

@@ -108,3 +108,22 @@ Option 2 (old tip, need to double-check)
 2. Re-run containers/services
 3. docker attach <container_id_of_django_posts_to_telegram_web>
 4. You can interact with container's stdin/stdout/stderr, i.e. with (Pdb).
+
+
+How to list directories with particular depth?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block::
+
+    # option 1
+    sudo apt-get install tree
+    tree -a -L 2 -I venv --dirsfirst
+
+    # option 2
+    find . -mindepth 2 -maxdepth 2 -type d
+
+    # option 3
+    du --exclude=venv --exclude=.git --max-depth=2 -h
+
+
+

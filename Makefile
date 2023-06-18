@@ -10,6 +10,9 @@ up:
 stop:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml stop
 
+start:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml start
+
 down:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml down
 

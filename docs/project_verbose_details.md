@@ -46,43 +46,51 @@ Check README.md page in project root for local and containerized setup
 (#project-structure)=
 ## Project structure
 
-    price_navigator/
-        ├── manage.py
-        ├── config/
-        |   ├── settings
-        |       ├── __init__.py
-        |       ├── base.py
-        |       ├── local.py
-        |       ├── production.py
-        |       ├── test.py
-        │   ├── __init__.py
-        │   ├── asgi.py
-        │   ├── api_router.py
-        │   ├── urls.py
-        │   └── wsgi.py
-        └── price_navigator/
-                ├── static/
-                ├── templates/
-                ├── utils/
-                ├── __init__.py
-                ├── conftest.py  # pytest's fixtutes
-                ├── users/
-                    ├── api/
-                    ├── migrations/
-                    ├── tests/
-                    ├── __init__.py
-                    ├── admin.py
-                    ├── apps.py
-            ├── models.py
-            ├── models.py
-            ├── tests.py
-                    ├── models.py
-            ├── tests.py
-            └── views.py
-            └── views.py
-:::
-                    └── views.py
-:::
+```shell
+tree -a -L 1 -C -I venv --dirsfirst
+tree -a -L 2 -C -I __pycache__ --dirsfirst price_navigator/
+
+# or with Disk Usage Analyzer
+du --exclude=venv --exclude=.git --exclude=.vscode --exclude=node_modules --exclude=sandbox --max-depth=2 -h
+
+```text
+# as of 18-06-2023, ab25ddfc97930e7d0c56e238cb3b104bfe41407b
+price_navigator/
+├── static
+│   ├── css
+│   ├── fonts
+│   ├── images
+│   ├── js
+│   └── sass
+├── templates
+│   ├── account
+│   ├── pages
+│   ├── users
+│   ├── 403.html
+│   ├── 404.html
+│   ├── 500.html
+│   └── base.html
+├── users
+│   ├── api
+│   ├── migrations
+│   ├── tests
+│   ├── __init__.py
+│   ├── adapters.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── context_processors.py
+│   ├── forms.py
+│   ├── managers.py
+│   ├── models.py
+│   ├── tasks.py
+│   ├── urls.py
+│   └── views.py
+├── utils
+│   ├── __init__.py
+│   └── storages.py
+├── __init__.py
+└── conftest.py
+```
 
 (#system-design-and-architecture)=
 ## System design and architecture
