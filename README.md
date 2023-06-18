@@ -71,7 +71,7 @@ Web application with the following high-level components and functionality:
   - continuous integration and delivery (CI/CD)
   - clouds services
 
-More details about architecture and tech stack can be found in [documentation](docs/project_details/project_knowledge_base/verbose_details.md)
+More details about architecture and tech stack can be found in [documentation](docs/project_verbose_details.md)
 
 ### Installation
 
@@ -169,7 +169,6 @@ source ./load_env_vars.sh
 
 # confirm that project env vars in $SHELL
 env
-
 
 # 2. Build and spin containers
 make build

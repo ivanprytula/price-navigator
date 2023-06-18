@@ -52,6 +52,8 @@ tree -a -L 2 -C -I __pycache__ --dirsfirst price_navigator/
 
 # or with Disk Usage Analyzer
 du --exclude=venv --exclude=.git --exclude=.vscode --exclude=node_modules --exclude=sandbox --max-depth=2 -h
+```
+---
 
 ```text
 # as of 18-06-2023, ab25ddfc97930e7d0c56e238cb3b104bfe41407b
@@ -91,12 +93,15 @@ price_navigator/
 ├── __init__.py
 └── conftest.py
 ```
+---
 
 (#system-design-and-architecture)=
 ## System design and architecture
 
 ![Price Navigator high-level architecture](images/project_architecture/high_level_scheme_price_navigator.png)
 ![Price Navigator high-level ERD](images/project_architecture/high_level_erd_price_navigator.png)
+
+
 
 (#tech-stack)=
 ## Tech Stack
@@ -206,6 +211,7 @@ In terms of _typical developer tools_:
     3. <https://www.sql-practice.com/>
     4. <https://caniuse.com/>
     5. <https://www.eraser.io/diagramgpt>
+    6. <https://github.com/pydoit/doit>
 3. **Particular topics**:
    1. <https://www.buchanan.com/database-performance-tuning-techniques/>
    2. <https://www.digitalocean.com/community/tutorials/how-to-secure-your-django-application-with-a-content-security-policy>
