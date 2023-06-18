@@ -7,8 +7,11 @@ build:
 up:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d
 
+stop:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml stop
+
 down:
-	docker compose -f docker-compose.yml -f docker-compose.dev.yml  down
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml down
 
 ####################################################################################################################
 # Testing, auto formatting, type checks, & Lint checks
