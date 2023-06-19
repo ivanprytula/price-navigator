@@ -1,0 +1,181 @@
+<mxfile host="65bd71144e">
+    <diagram id="lT6zE53QT2mrC2FYVxPt" name="General">
+        <mxGraphModel dx="950" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="50" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;fontSize=16;fontColor=#1A1A1A;" parent="1" source="48" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="189.47058823529414" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62" value="" style="edgeStyle=none;html=1;fontSize=16;fontColor=#FFFFFF;rounded=1;sketch=0;shadow=0;jumpStyle=none;startArrow=classic;startFill=1;" parent="1" source="48" target="61" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 16px&quot;&gt;User's Browser&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="390" width="120" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="" style="edgeStyle=none;html=1;fontSize=16;fontColor=#FFFFFF;sketch=0;shadow=0;startArrow=classic;startFill=1;" parent="1" source="61" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 16px&quot;&gt;DNS&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="410" width="90" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 16px&quot;&gt;Load &lt;br&gt;Balancer&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="410" width="103" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;exitX=0.998;exitY=0.411;exitDx=0;exitDy=0;entryX=-0.015;entryY=0.364;entryDx=0;entryDy=0;entryPerimeter=0;shadow=0;fontSize=18;fontColor=#000000;startArrow=classicThin;startFill=1;exitPerimeter=0;" parent="1" source="69" target="80" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shadow=0;fontSize=16;fontColor=#000000;startArrow=none;startFill=0;" parent="1" source="69" target="103" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;Web Server&lt;/span&gt;&lt;/div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;* Apache&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;* nginx&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;* IIS&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#FFFFFF;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="418" width="133" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;fontSize=16;fontColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;sketch=0;shadow=0;startArrow=classic;startFill=1;" parent="1" source="65" target="69" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="520" y="540" as="sourcePoint"/>
+                        <mxPoint x="570" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="79" value="&lt;font style=&quot;font-size: 18px&quot;&gt;&lt;b&gt;Dashboard&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=16;fontColor=#ffffff;strokeColor=#006EAF;fillColor=#1ba1e2;arcSize=19;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="250" width="340" height="63" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;shadow=0;fontSize=18;fontColor=#000000;startArrow=classicThin;startFill=1;" parent="1" source="80" target="84" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=-0.02;entryY=0.583;entryDx=0;entryDy=0;entryPerimeter=0;shadow=0;fontSize=16;fontColor=#000000;startArrow=none;startFill=0;" parent="1" source="80" target="139" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;App Server&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="423" width="160" height="177" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;shadow=0;fontSize=18;fontColor=#000000;startArrow=classicThin;startFill=1;" parent="1" source="84" target="87" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 16px&quot;&gt;Database&lt;br&gt;&lt;i&gt;(cache)&lt;/i&gt;&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="423" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="&lt;font color=&quot;#1a1a1a&quot; style=&quot;font-size: 16px&quot;&gt;Database&lt;br&gt;SQL/NoSQL&lt;br&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="512" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shadow=0;fontSize=16;fontColor=#000000;startArrow=none;startFill=0;" parent="1" source="92" target="94" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;Cloud Storage&lt;br style=&quot;font-size: 16px;&quot;&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#FFFFFF;rounded=1;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="640" width="160" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;shadow=0;fontSize=16;fontColor=#808080;startArrow=classicThin;startFill=1;" parent="1" source="94" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px&quot;&gt;CDN (cache)&lt;br style=&quot;font-size: 16px&quot;&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#FFFFFF;rounded=1;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="640" width="124.83" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;shadow=0;fontSize=16;fontColor=#808080;startArrow=none;startFill=0;entryX=0.006;entryY=0.446;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="102" target="104" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="677" y="653" as="sourcePoint"/>
+                        <mxPoint x="933" y="673" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="107" value="" style="group;rounded=1;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="610" y="700" width="155" height="79" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=13.041628081223053;labelBackgroundColor=none;fontSize=15;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;rounded=1;" parent="107" vertex="1">
+                    <mxGeometry x="18" width="137" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=13.041628081223053;labelBackgroundColor=none;fontSize=15;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;rounded=1;" parent="107" vertex="1">
+                    <mxGeometry x="9" y="10" width="137" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="&lt;span style=&quot;font-size: 16px&quot;&gt;Data warehouse&lt;/span&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=13.041628081223053;labelBackgroundColor=none;fontSize=15;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;rounded=1;" parent="107" vertex="1">
+                    <mxGeometry y="21" width="137" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="" style="group;rounded=1;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="560" y="560" width="96.75" height="64.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;labelBackgroundColor=none;fontSize=16;fontColor=#808080;strokeColor=#000000;fillColor=#FFFFFF;rotation=-90;rounded=1;" parent="110" vertex="1">
+                    <mxGeometry x="22.25" y="-22.25" width="37.5" height="82" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;labelBackgroundColor=none;fontSize=16;fontColor=#808080;strokeColor=#000000;fillColor=#FFFFFF;rotation=-90;rounded=1;" parent="110" vertex="1">
+                    <mxGeometry x="27.75" y="-13.75" width="36.5" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;labelBackgroundColor=none;fontSize=16;fontColor=#808080;strokeColor=#000000;fillColor=#FFFFFF;rotation=-90;flipV=0;flipH=1;direction=east;rounded=1;" parent="110" vertex="1">
+                    <mxGeometry x="31.25" y="-1" width="36.25" height="94.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="&lt;font style=&quot;font-size: 12px ; line-height: 1&quot;&gt;Data &quot;firehouse&quot;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;labelBackgroundColor=none;fontSize=15;fontColor=#000000;labelPosition=center;verticalLabelPosition=middle;" parent="110" vertex="1">
+                    <mxGeometry x="36" y="33" width="56.5" height="22.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="" style="image;html=1;image=img/lib/clip_art/telecommunication/iPhone_128x128.png;labelBackgroundColor=none;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="420" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="" style="image;html=1;image=img/lib/clip_art/computers/Laptop_128x128.png;labelBackgroundColor=none;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="440" width="40" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="" style="image;html=1;image=img/lib/clip_art/computers/iMac_128x128.png;labelBackgroundColor=none;fontSize=12;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="150" y="420" width="30" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Presentation tier&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=12;fillColor=#60a917;sketch=1;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="350" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="&lt;h3&gt;&lt;font color=&quot;#ffffff&quot;&gt;Web Application Architecture and Diagram&lt;/font&gt;&lt;/h3&gt;" style="text;html=1;strokeColor=#432D57;fillColor=#76608a;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="325" y="20" width="520" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Business/App tier&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=12;fillColor=#60a917;sketch=1;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="350" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Data tier&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=12;fillColor=#60a917;sketch=1;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="350" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="Firewall" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;labelBackgroundColor=none;sketch=0;fontSize=16;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="490" width="95" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="Proxy wall" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;labelBackgroundColor=none;sketch=0;fontSize=16;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="490" width="110" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;exitX=0.15;exitY=0.05;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;shadow=0;fontSize=16;fontColor=#000000;startArrow=none;startFill=0;" parent="1" source="102" target="92" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="BI Analytics" style="whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="700" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;shadow=0;fontSize=16;fontColor=#000000;startArrow=none;startFill=0;" parent="1" source="105" target="128" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="Data Analytics" style="whiteSpace=wrap;html=1;fontSize=15;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;labelBackgroundColor=none;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="758" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;shadow=0;fontSize=16;fontColor=#000000;startArrow=none;startFill=0;" parent="1" target="130" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="760" y="755" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="132" value="&lt;i&gt;API Layer&lt;/i&gt;&lt;br&gt;Web services API" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;sketch=0;fontSize=16;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="723.75" y="460" width="132.5" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="&lt;i&gt;App&lt;/i&gt;&lt;br&gt;Business logic" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;sketch=0;fontSize=16;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="723.75" y="520" width="132.5" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;sketch=0;jumpStyle=none;html=1;shadow=0;fontSize=16;fontColor=#000000;startArrow=none;startFill=0;" parent="1" source="139" target="141" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="Job queue" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rounded=1;labelBackgroundColor=none;sketch=0;fontSize=16;fontColor=#000000;strokeColor=#000000;fillColor=#FFFFFF;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="610" width="50" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="Job servers" style="whiteSpace=wrap;html=1;fontSize=16;fillColor=#FFFFFF;strokeColor=#000000;fontColor=#000000;rounded=1;labelBackgroundColor=none;sketch=0;" parent="1" vertex="1">
+                    <mxGeometry x="1025" y="620" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="MzyrGO8rSYftcGRGIBHD" name="Components">
+        <mxGraphModel dx="756" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="2Ms-l0d5lwI7yfS9B6Vh-0"/>
+                <mxCell id="2Ms-l0d5lwI7yfS9B6Vh-1" parent="2Ms-l0d5lwI7yfS9B6Vh-0"/>
+                <mxCell id="2Ms-l0d5lwI7yfS9B6Vh-2" value="&lt;h2 style=&quot;text-align: center&quot; class=&quot;nitro-offscreen&quot; id=&quot;web-application-architecture-components&quot;&gt;&lt;strong&gt;Web Application Architecture Components&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;&lt;a name=&quot;title4&quot;&gt;&lt;/a&gt;&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;DNS&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;DNS&amp;nbsp;or Domain Name System is a fundamental system that helps search a&amp;nbsp;domain name and IP address, and in this manner, a particular server&amp;nbsp;receives a request sent by a user. We can say that DNS is like a phonebook but for the Internet websites.&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;Load Balancer&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;Load Balancer primarily deals with horizontal scaling. With directing&amp;nbsp;incoming requests to one of the multiple servers, the load balancer&amp;nbsp;sends an answer to a user. Usually, web application servers exist in the&amp;nbsp;form of multiple copies mirroring each other. Hence, any server&amp;nbsp;processes requests in the same manner, and the load balancer distributes&amp;nbsp;tasks among them so they will not be overcharged.&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;Web App Servers&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;This&amp;nbsp;component processes a user’s request and sends documents (JSON, XML,&amp;nbsp;etc.) back to a browser. To perform this task, it usually refers to&amp;nbsp;back-end infrastructures such as database, cache server, job queue, and&amp;nbsp;others. Besides, at least two servers, connected to the load balancer,&amp;nbsp;manage to process the user’s requests.&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;Databases&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;The&lt;br&gt; name of this web application component speaks for itself. The database&amp;nbsp;gives instruments for organizing, adding, searching, updating, deleting,&amp;nbsp;and performing computations. In most cases, web application servers&amp;nbsp;directly interact with the job servers.&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;Caching Service&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;Caching&amp;nbsp;service provides storage for data, which allows storing and searching&amp;nbsp;data. Whenever a user gets some information from the server, the results&amp;nbsp;of this operation goes to cache. So, future requests return faster. In&amp;nbsp;one word, caching allows you to refer to the previous result to make a&amp;nbsp;computation much faster. Therefore, caching is effective when:&lt;/p&gt; &lt;ul class=&quot;nitro-offscreen&quot;&gt; &lt;li&gt;the computation is slow;&lt;/li&gt; &lt;li&gt;computation is likely to occur many times;&lt;/li&gt; &lt;li&gt;when the results are the same for a particular request.&lt;/li&gt; &lt;/ul&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;Job Queue (optional)&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;Job&amp;nbsp;queue consists of two components: the job queue itself and servers.&amp;nbsp; These servers process jobs in the queue. It happens that most of the&amp;nbsp;web-servers need to operate a vast amount of jobs that are not of&amp;nbsp;primary importance. Therefore, when a job needs to be fulfilled, it goes&amp;nbsp;to the job queue and is operated due to a schedule.&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;Full-Text Search Service (optional)&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;Many&amp;nbsp;web applications support the search by text function or so-called&amp;nbsp;request, and then, an app sends the most relevant results to a user.&amp;nbsp;This technology is named full-text search service. With the help of&amp;nbsp;keywords, it searches the needed data among a vast number of documents.&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;Services&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;When&amp;nbsp;a web application reaches a specific level, services are created in the&amp;nbsp;form of separate apps. They are not that visible among other web&amp;nbsp;application components, but the web application and other services&amp;nbsp;interact with them.&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;Data Warehouse&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;Almost&amp;nbsp;every modern application implies the work with data such as collecting,&amp;nbsp;storing and analyzing. These processes require three stages:&lt;/p&gt; &lt;ol class=&quot;nitro-offscreen&quot;&gt; &lt;li&gt;The data is sent to the data “firehose”, which provides a streaming interface for absorption and processing of data.&lt;/li&gt; &lt;li&gt;Raw, processed, and additional data is sent to cloud storage.&lt;/li&gt; &lt;li&gt;And processed and additional data also go to a data warehouse.&lt;/li&gt; &lt;/ol&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;It’s&amp;nbsp;a particular model of online storage and exchange of data through the&amp;nbsp;Internet. The Data Warehouse can be used for storing a variety of files&amp;nbsp;of different types such as videos, photos, or so on.&lt;/p&gt; &lt;h4 class=&quot;nitro-offscreen&quot;&gt;&lt;i&gt;CDN&lt;/i&gt;&lt;/h4&gt; &lt;p class=&quot;nitro-offscreen&quot;&gt;CDN or Content Delivery System deals with sending HTML files, CSS files, JavaScript&amp;nbsp;files, and images. It delivers the content of the end server throughout the world, so people can load various sources&lt;/p&gt;" style="text;whiteSpace=wrap;html=1;" parent="2Ms-l0d5lwI7yfS9B6Vh-1" vertex="1">
+                    <mxGeometry x="20" y="20" width="1110" height="980" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
