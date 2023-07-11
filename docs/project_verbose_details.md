@@ -10,16 +10,14 @@
 
 [Tech Stack](#tech-stack)
 
-[Useful resources](#useful-resources)
-
 [Credits and gratitude](#credits-and-gratitude)
 
 (#requirements)=
 ## Requirements
 
-- Knowledge of your operating system: basic commands and utilities to perform common tasks, such as file management, process management, user management, etc.
+- Knowledge of your operating system: basic commands and utilities to perform everyday tasks, such as file management, process management, user management, etc.
 - IDE or "text editor on steroids" ^_^
-- Knowledge and desire to learn modern browsers DevTools: page inspector, console, sources, network, application and other tabs
+- Knowledge and desire to learn modern browsers DevTools: page inspector, console, sources, network, application, and other tabs
 - [CPython 3.10+](https://www.python.org/downloads/)
 - [NodeJS](https://nodejs.org/en/download) / `npm`
 - [Git](https://git-scm.com/downloads), [GitHub account](https://github.com/) / [GitHub CLI](https://cli.github.com/)
@@ -72,6 +70,7 @@ price_navigator/
 │   ├── 404.html
 │   ├── 500.html
 │   └── base.html
+
 ├── users
 │   ├── api
 │   ├── migrations
@@ -131,7 +130,7 @@ In terms of _technologies_:
 
 1. **Environment setup**: shell scripts, Makefile, Docker, Docker Compose, Kubernetes
 2. **Backend**: Python 3.10, Django 4.2
-3. **API**: Django REST Framework, Websockets, Swagger/OpenAPI
+3. **API**: Django REST Framework, WebSockets, Swagger/OpenAPI
 4. **Databases servers/Docker images**: PostgreSQL, Redis, MongoDB, Cassandra
 5. **Data analysis**: Pandas, NumPy, Matplotlib, Seaborn, or Plotly
 6. **ETL pipeline**: Airflow
@@ -144,7 +143,7 @@ In terms of _technologies_:
     - environment variables/password/secrets management
     - Content Security Policy (CSP)
     - XSS
-    - Django deployment check list
+    - Django deployment checklist
 11. **UI**: HTML, CSS, JavaScript
 12. **Documentation**: Markdown, reStructuredText
 13. **Cloud hosting/PaaS**: AWS (EC2, S3, CloudWatch)
@@ -159,7 +158,7 @@ In terms of _tech skills / practical knowledge / experience with_:
 1. Design patterns and SOLID principles
 2. Data structures and algorithms
 3. Experience with Python web frameworks both sync and async
-4. Implement various ways of communication with client (e.g. REST API, WebSockets)
+4. Implement various ways of communication with clients (e.g. REST API, WebSockets)
 5. Implement various ways of authentication (e.g. JWT, cookie-based auth, OAuth)
 6. Experience and development on different data stores (RDBMS, NoSQL, KeyStore, etc.)
 7. Experience in databases optimization: indexing, query tuning, execution plans, normalization
@@ -195,43 +194,8 @@ In terms of _typical developer tools_:
    6. markdownlint
 3. `.editorconfig` to maintain consistent coding styles for multiple developers
 4. Browsers' Web Developer tools
-5. shell alias for Git commands
-6. cheat sheet of most common/oftenly used shell/CLI commands
-
-(#useful-resources)=
-## Useful resources
-
-1. **Base/core**:
-   1. <https://docs.python.org/3/>
-   2. <https://docs.djangoproject.com/en/4.2/>
-   3. <https://docs.docker.com/>
-2. **Handy web services/tools**:
-    1. <https://regex101.com/>
-    2. <https://jsonformatter.curiousconcept.com/>
-    3. <https://www.sql-practice.com/>
-    4. <https://caniuse.com/>
-    5. <https://www.eraser.io/diagramgpt>
-    6. <https://github.com/pydoit/doit>
-3. **Particular topics**:
-   1. <https://www.buchanan.com/database-performance-tuning-techniques/>
-   2. <https://www.digitalocean.com/community/tutorials/how-to-secure-your-django-application-with-a-content-security-policy>
-   3. <https://www.laac.dev/blog/content-security-policy-using-django/>
-   4. <https://github.com/dnaprawa/dockerfile-best-practices>
-4. **General articles/blogs/books**
-   1. <https://bytebytego.com/courses/system-design-interview/foreword>
-   2. <https://www.startdataengineering.com/>
-5. **Inspiration/templates**
-    1. <https://awesomedjango.org/>
-    2. <https://github.com/donnemartin/system-design-primer>
-6. **Other/pile of links**
-   1. <https://www.testgorilla.com/glossary/>
-7. **Optimization**
-   1. <https://www.citusdata.com/blog/2020/05/20/postgres-tips-for-django-and-python/>
-   2. <https://adamj.eu/tech/2022/06/21/optimize-postgresql-queries-from-django-using-pgmustard/>
-8. **Troubleshooting and debugging**
-   1. <https://stackoverflow.com/questions/26598738/how-to-create-user-database-in-script-for-docker-postgres>
-   2. <https://docs.docker.com/compose/environment-variables/envvars-precedence/>
-   3. <https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally>
+5. Shell alias for Git commands
+6. cheat sheet of most common/often used shell/CLI commands
 
 
 (#credits-and-gratitude)=
