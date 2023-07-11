@@ -16,12 +16,7 @@
 ## Requirements
 
 - Knowledge of your operating system: basic commands and utilities to perform everyday tasks, such as file management, process management, user management, etc.
-- IDE or "text editor on steroids" ^_^
-- Knowledge and desire to learn modern browsers DevTools: page inspector, console, sources, network, application, and other tabs
-- [CPython 3.10+](https://www.python.org/downloads/)
-- [NodeJS](https://nodejs.org/en/download) / `npm`
-- [Git](https://git-scm.com/downloads), [GitHub account](https://github.com/) / [GitHub CLI](https://cli.github.com/)
-- [Docker Engine](https://docs.docker.com/engine/install/), [Docker Compose v2](https://docs.docker.com/compose/)
+- IDE or "text editor on steroids" ^_^pip install --upgrade pipom/engine/install/), [Docker Compose v2](https://docs.docker.com/compose/)
 - Databases servers (for local development w/o containers)
   - [PostgreSQL](https://www.postgresql.org/download/)
   - other
