@@ -1,9 +1,9 @@
-# define an alias for the specific python version used in this file.
-FROM python:3.11.4-slim-bullseye as python
+# 0. define an alias for the specific python version used in this file.
+FROM python:3.11.4-slim-bullseye as python-base
 LABEL maintainer="Ivan Prytula <ivanprytula87@gmail.com>"
 
-# Python build stage
-FROM python as python-build-stage
+# 1. Python build stage
+FROM python-base as python-build-stage
 
 ARG BUILD_ENVIRONMENT=local
 
@@ -18,17 +18,22 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 COPY ./requirements .
 
 # Create Python Dependency and Sub-Dependency Wheels.
+# NB: check this: https://pythonwheels.com/
 RUN pip wheel --wheel-dir /usr/src/app/wheels  \
   -r ${BUILD_ENVIRONMENT}.txt
 
 
-# Python 'run' stage
-FROM python as python-run-stage
+# 2. Python 'run' stage
+FROM python-base as python-run-stage
 
 ARG BUILD_ENVIRONMENT=local
 ARG APP_HOME=/app
 
-# set environment variables
+# 2.1 Set environment variables
+# disables an automatic check for pip updates each time
+# ENV PIP_DISABLE_PIP_VERSION_CHECK 1
+
+# ensures our console output is not buffered by Docker
 ENV PYTHONUNBUFFERED 1
 # Python won't try to write .pyc files
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -41,7 +46,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   # psycopg2 dependencies
   libpq-dev \
   # Translations dependencies
-  gettext \
+#   gettext \
   # cleaning up unused files
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && rm -rf /var/lib/apt/lists/*
@@ -50,11 +55,12 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 # copy python dependency wheels from python-build-stage
 COPY --from=python-build-stage /usr/src/app/wheels  /wheels/
 
-# use wheels to install python dependencies
+# use wheels to install Python dependencies
 RUN pip install --no-cache-dir --no-index --find-links=/wheels/ /wheels/* \
 	&& rm -rf /wheels/
 
-COPY ./compose/production/django/entrypoint /entrypoint
+COPY ./compose/production/web/entrypoint /entrypoint
+# convert files with Windows-style line endings (\r\n) to Unix-style line endings (\n)
 RUN sed -i 's/\r$//g' /entrypoint
 RUN chmod +x /entrypoint
 
